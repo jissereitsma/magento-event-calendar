@@ -1,0 +1,17 @@
+{
+  "name": "magento-community/event-calendar",
+  "description": "A listing of all kinds of Magento events world-wide",
+  "require": {
+    "eluceo/ical": "^0.16.0",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "MagentoCommunity\\EventCalendar\\Test\\": "tests/",
+      "MagentoCommunity\\EventCalendar\\": "src/"
+    }
+  }
+}

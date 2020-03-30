@@ -1,0 +1,35 @@
+{
+  "reacticon-workshops": {
+    "startDate": "2020-10-12",
+    "endDate": "2020-10-13",
+    "name": "Reacticon Workshops",
+    "infoLink": "https://reacticon.org",
+    "location": {
+      "venue": "Burgers Zoo",
+      "city": "Arnhem",
+      "country": "The Netherlands"
+    }
+  },
+  "reacticon-contribution-day": {
+    "startDate": "2020-10-13",
+    "endDate": "2020-10-13",
+    "name": "Reacticon Contribution Day",
+    "infoLink": "https://reacticon.org",
+    "location": {
+      "venue": "Burgers Zoo",
+      "city": "Arnhem",
+      "country": "The Netherlands"
+    }
+  },
+  "reacticon-conference": {
+    "startDate": "2020-10-14",
+    "endDate": "2020-10-15",
+    "name": "Reacticon Conference",
+    "infoLink": "https://reacticon.org",
+    "location": {
+      "venue": "Burgers Zoo",
+      "city": "Arnhem",
+      "country": "The Netherlands"
+    }
+  }
+}

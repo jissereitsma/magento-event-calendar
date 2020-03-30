@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class JsonTest extends TestCase
 {
-    public function testHelloWorld()
+    public function testGetData()
     {
         $json = $this->getJson();
         $data = $json->getData();
@@ -21,6 +21,9 @@ class JsonTest extends TestCase
         }
     }
 
+    /**
+     * @return Json
+     */
     private function getJson(): Json
     {
         return new Json();

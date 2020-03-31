@@ -14,6 +14,8 @@ into the following feeds:
 - Wait for 12 hours, because new calendars-from-URL are not updated directly by Google
 
 ## Todo
+- Create `Event/Location` class
+- Implement location in GCal feed
 - Prevent unit tests from re-generating feeds
 - Add tool to report outdated entries from `data/` 
 - Setup a cronjob to automatically parse new accepted entries

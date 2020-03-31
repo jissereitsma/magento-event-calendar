@@ -7,6 +7,12 @@ into the following feeds:
 - An [iCal feed](https://raw.githubusercontent.com/jissereitsma/magento-event-calendar/master/feeds/events.ics) could be configured into Google Calendar, Outlook and other agenda systems.
 - A [JSON feed](https://raw.githubusercontent.com/jissereitsma/magento-event-calendar/master/feeds/events.json) could be configured as you see fit.
 
+## Usage in Google Calendar
+- Add a new calendar **From URL**
+- As URL, use https://raw.githubusercontent.com/jissereitsma/magento-event-calendar/master/feeds/events.json
+- Add the new calendar to your Google Calendar
+- Wait for 12 hours, because new calendars-from-URL are not updated directly by Google
+
 ## Todo
 - Parse files from `data/*.json` via JSON reader into `feeds`
 - Add JSON validation for all files

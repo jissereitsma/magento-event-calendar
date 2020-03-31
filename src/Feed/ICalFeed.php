@@ -42,6 +42,7 @@ class ICalFeed
             $calendarEvent
                 ->setDtStart(new DateTime($event->getStartDate()))
                 ->setDtEnd(new DateTime($event->getEndDate()))
+                ->setUrl($event->getInfoLink())
                 ->setNoTime(true)
                 ->setSummary($event->getName());
             $calendar->addComponent($calendarEvent);

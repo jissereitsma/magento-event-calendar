@@ -8,9 +8,7 @@ into the following feeds:
 - JSON feed for usage in AJAX tools
 
 ## Todo
-- Parse files from `data/*.json` via JSON reader into `feeds`
-- Add JSON validation for all files
+- Prevent unit tests from re-generating feeds
 - Add tool to report outdated entries from `data/` 
-- Better describe how to feeds in `feeds` could be used
 - Setup a cronjob to automatically parse new accepted entries
 - Setup GitHub Actions to test whether new entries are acceptable

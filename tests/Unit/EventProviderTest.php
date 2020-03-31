@@ -8,6 +8,10 @@ use MagentoCommunity\EventCalendar\EventProvider;
 use MagentoCommunity\EventCalendar\Model\Event;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class EventProviderTest
+ * @package MagentoCommunity\EventCalendar\Test\Unit\Reader
+ */
 class EventProviderTest extends TestCase
 {
     public function testGetData()

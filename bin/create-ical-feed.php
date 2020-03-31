@@ -6,4 +6,4 @@ use MagentoCommunity\EventCalendar\Feed\ICalFeed;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $icsFeed = new ICalFeed();
-$jsonFeed->create();
+$icsFeed->create();

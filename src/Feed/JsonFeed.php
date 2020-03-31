@@ -12,6 +12,11 @@ use MagentoCommunity\EventCalendar\EventProvider;
 class JsonFeed
 {
     /**
+     * @var EventProvider
+     */
+    private $eventProvider;
+
+    /**
      * JsonFeed constructor.
      */
     public function __construct()

@@ -6,6 +6,7 @@ namespace MagentoCommunity\EventCalendar\Feed;
 use DateTime;
 use Eluceo\iCal\Component\Calendar;
 use Eluceo\iCal\Component\Event;
+use Eluceo\iCal\Property\Event\Geo;
 use Exception;
 use MagentoCommunity\EventCalendar\EventProvider;
 

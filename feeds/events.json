@@ -3,18 +3,30 @@
         "name": "Reacticon Workshops",
         "startDate": "2020-10-12",
         "endDate": "2020-10-13",
-        "infoLink": "https:\/\/reacticon.org"
+        "infoLink": "https:\/\/reacticon.org",
+        "location": {
+            "city": "Arnhem",
+            "country": "The Netherlands"
+        }
     },
     {
         "name": "Reacticon Contribution Day",
         "startDate": "2020-10-13",
         "endDate": "2020-10-13",
-        "infoLink": "https:\/\/reacticon.org"
+        "infoLink": "https:\/\/reacticon.org",
+        "location": {
+            "city": "Arnhem",
+            "country": "The Netherlands"
+        }
     },
     {
         "name": "Reacticon Conference",
         "startDate": "2020-10-14",
         "endDate": "2020-10-15",
-        "infoLink": "https:\/\/reacticon.org"
+        "infoLink": "https:\/\/reacticon.org",
+        "location": {
+            "city": "Arnhem",
+            "country": "The Netherlands"
+        }
     }
 ]

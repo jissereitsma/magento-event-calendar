@@ -4,12 +4,13 @@ declare(strict_types=1);
 namespace MagentoCommunity\EventCalendar\Model;
 
 use InvalidArgumentException;
+use MagentoCommunity\EventCalendar\Model\Event\Location;
 
 /**
  * Class Event
  * @package MagentoCommunity\EventCalendar\Model
  */
-class Event
+class Event extends AbstractModel
 {
     /**
      * @var string
@@ -32,9 +33,24 @@ class Event
     private $infoLink;
 
     /**
+     * @var Location
+     */
+    private $location;
+
+    /**
+     * Fields
+     */
+    protected $fields = [
+        'name' => 'getName',
+        'startDate' => 'getStartDate',
+        'endDate' => 'getEndDate',
+        'infoLink' => 'getInfoLink',
+    ];
+
+    /**
      * Required fields
      */
-    const REQUIRED_FIELDS = [
+    protected $requiredFields = [
         'name',
         'startDate',
         'endDate',
@@ -48,10 +64,14 @@ class Event
     public function __construct(array $data)
     {
         $this->validateData($data);
-        $this->name = (string)$data['name'] ?? '';
-        $this->startDate = (string)$data['startDate'] ?? '';
-        $this->endDate = (string)$data['endDate'] ?? '';
-        $this->infoLink = (string)$data['infoLink'] ?? '';
+        $this->name = isset($data['name']) ? (string)$data['name'] : '';
+        $this->startDate = isset($data['startDate']) ? (string)$data['startDate'] : '';
+        $this->endDate = isset($data['endDate']) ? (string)$data['endDate'] : '';
+        $this->infoLink = isset($data['infoLink']) ? (string)$data['infoLink'] : '';
+
+        if (!empty($data['location'])) {
+            $this->location = new Location($data['location']);
+        }
     }
 
     /**
@@ -59,27 +79,12 @@ class Event
      */
     public function toArray(): array
     {
-        return [
-            'name' => $this->getName(),
-            'startDate' => $this->getStartDate(),
-            'endDate' => $this->getEndDate(),
-            'infoLink' => $this->getInfoLink(),
-        ];
-    }
-
-    /**
-     * @param array $data
-     * @return bool
-     */
-    public function validateData(array $data): bool
-    {
-        foreach (self::REQUIRED_FIELDS as $requiredField) {
-            if (!isset($data[$requiredField])) {
-                throw new InvalidArgumentException('Missing data field "' . $requiredField . '": '.var_export($data, true));
-            }
+        $data = $this->getFieldData();
+        if ($this->location instanceof Location) {
+            $data['location'] = $this->location->toArray();
         }
 
-        return true;
+        return $data;
     }
 
     /**
@@ -113,5 +118,21 @@ class Event
     public function getInfoLink(): string
     {
         return $this->infoLink;
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasLocation(): bool
+    {
+        return ($this->location instanceof Location);
+    }
+
+    /**
+     * @return Location
+     */
+    public function getLocation(): Location
+    {
+        return $this->location;
     }
 }

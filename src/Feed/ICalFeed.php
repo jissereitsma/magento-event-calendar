@@ -45,6 +45,11 @@ class ICalFeed
                 ->setUrl($event->getInfoLink())
                 ->setNoTime(true)
                 ->setSummary($event->getName());
+
+            if ($event->hasLocation()) {
+                $calendarEvent->setLocation($event->getLocation()->getFullAddress());
+            }
+
             $calendar->addComponent($calendarEvent);
         }
 
